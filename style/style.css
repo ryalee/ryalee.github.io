@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000000;
+    color: #c943fa;
+}
+
+.header {
+    padding: 10px;
+}
+
+.header h1 {
+    font-size: 40px;
+    margin: 20px;
+    margin-left: 40px;
+    line-height: 40px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-end;
+    font-size: 20px;
+}
+
+.nav li{
+    color: #9834bd;
+    display: inline-block;
+    flex-direction: row;    
+    padding: 0 10px;
+}
+
+.nav li:hover {
+    transform: scale(1.2);
+}
+
+.main {
+    background-color: rgba(57, 10, 75, .75);
+    color: #d46bfa;
+    display: flex;
+}
+
+.main > .about {
+    display: flex;
+    max-width: 500px;
+}
+
+.main h2 {
+    font-size: 30px;
+    margin: 20px;
+    padding: 10px;
+    margin-left: 40px;
+    line-height: 30px;
+}
+
+.main p {
+    margin: 30px;
+    font-size: 20px;
+}
+
+.main > .git-lang {
+    margin: 80px 200px;
+}
+
+.projetos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.projetos-header h2 {
+    font-size: 23px;
+    margin: 20px 0 0 550px;
+}
+
+.projetos-header h4 {
+    font-size: 18px;
+    margin: 10px 0 10px 460px;
+}
+
+img {
+    width: 400px;
+    transition: all .5s ease;
+    
+}
+
+img:hover:not(.img-git-lang) {
+    transform: scale(1.1);
+}
+
+.contato {
+    display: flex; 
+    position: relative;
+}
+
+.contato h2 {
+    font-size: 18px;
+    margin: 10px 0 0 100px;
+}
+
+.contato h3 {
+    font-size: 18px;
+    margin: 0 0 0 100px;
+}
+
+.contato > form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 16px;
+    position: absolute;
+    margin: 50px 0px 0px 450px;
+}
+
+.contato input {
+    background-color: #d7dbdb;
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+}
+
+.contato input::placeholder{
+    color: #8d17b8;
+}
+
+.contato textarea::placeholder{
+    color: #8d17b8;
+}
+
+.contato textarea {
+    background-color: #d7dbdb;
+    padding: 6px;
+    border-radius: 6px;
+    border: none;
+}
+
+.contato input[type='submit'] {
+    width: 80px;
+    margin: 0 0 10px 20px;
+    text-align: center;
+    padding: 20px;
+    transition-duration: .5s;
+}
+
+.contato input:focus, textarea:focus {
+    border: 0 none;
+    outline: 0;
+}
+
+.contato input[type='submit']:hover {
+    transform: scale(1.1);
+}
