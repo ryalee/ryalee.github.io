@@ -1,0 +1,28 @@
+color pallete:
+
+#ef6817 -> laranja
+#21201f -> um preto ae
+#727271 -> cinza
+#5f605d -> cinza escuro
+#383838 -> cinza mais escuro
+
+o que vou implementar:
+
+Habilidades
+
+html
+css
+js
+nodejs
+git
+react native
+
+** Serviços
+
+-[] Produção de websites responsivos, landing pages a sites dinâmicos;
+
+-[] landing pages para serviços e produtos;
+
+-[] carregamento rapido. A velocidade de carregamento de um site é uma questão fundamental para uma boa experiência do usuário e para SEO.
+
+-[] apps android e ios usando react native
