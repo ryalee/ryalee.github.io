@@ -8,10 +8,23 @@
 
 body {
   background-color: #f6f6f6;
+  font-family: 'Oxygen', sans-serif;
+}
+
+header {
+  text-align: center;
+  justify-content: center;
+  padding: 10px;
 }
 
 .logo {
   font-family: 'Montserrat Alternates', sans-serif;
   color: #023246;
+}
+
+.hero img {
+  width: 350px;
+  margin-left: 26px;
+  margin-top: 40px;
 }
 

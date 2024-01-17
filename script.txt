@@ -1,9 +1,7 @@
 color pallete:
 
-#ef6817 -> laranja
-#21201f -> um preto ae
-#727271 -> cinza
-#5f605d -> cinza escuro
+#6962f7 -> AZUL BEM AZULZIN
+#17224D -> um AZUL QUASE PRETO
 #383838 -> cinza mais escuro
 
 o que vou implementar:
