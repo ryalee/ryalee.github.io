@@ -185,6 +185,10 @@ label {
   font-weight: 600;
 }
 
+.portfolio {
+  margin-top: 80px;
+}
+
 .portfolioText {
   text-align: center;
 }
