@@ -1,0 +1,35 @@
+{
+  "nav": {
+    "about": "Sobre",
+    "projects": "Projetos",
+    "stack": "Stack",
+    "contact": "Contato"
+  },
+
+  "hero": {
+    "title": "Engenheiro de Software, Desenvolvedor FullStack & entusiasta de Cybersecurity",
+    "subtitle": "+4 anos de XP como freelancer",
+    "buttonProjects": "Meus Projetos",
+    "buttonCV": "Meu Currículo"
+  },
+
+  "about": {
+    "left-comment": "/* quem sou eu? */",
+    "right-comment": "/* minhas prioridades ao iniciar um novo projeto */",
+    "text": "Me chamo Ryan, tenho 23 anos, bacharelando em Engenharia de Software e desenvolvedor fullstack.Possuo 4 anos de experiência atuando de forma autônoma como freelancer, permaneço nesse modelo atualmente com um perfil de agência. Também me aventuro no mundo da cibersegurança para entender as principais falhas e brechas perigosas para assim construir soluções mais robustas e seguras.",
+    "priorities": [
+      {
+        "title": "// arquitetura do software"
+      },
+      {
+        "title": "// segurança"
+      },
+      {
+        "title": "// controle"
+      },
+      {
+        "title": "// cafeína ∞"
+      }
+    ]
+  }
+}
