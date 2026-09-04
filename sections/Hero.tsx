@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function Hero() {
   return (
-    <section className="flex justify-around items-center py-20">
+    <section className="flex justify-around items-center py-20 mt-20">
       <div>
         <h1 className="text-5xl w-200">Engenheiro de Software, Desenvolvedor FullStack & entusiasta de Cybersecurity</h1>
 
@@ -51,6 +51,7 @@ export default function Hero() {
         alt="Imagem principal"
         width={400}
         height={400}
+        className="animate -z-10"
       />
     </section>
   )

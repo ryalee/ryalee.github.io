@@ -33,18 +33,23 @@ const priorities = [
     ),
     image: "/images/about/coffee.png",
   },
+  {
+    id: 5,
+    text: "// Experiência do usuário",
+    image: "/images/about/circus.png"
+  }
 ];
 
 export default function About() {
   return (
-    <section className="flex flex-col" id="sobre">
-      <div className="flex justify-between items-center" >
+    <section className="flex flex-col py-20" id="sobre">
+      <div className="flex items-center">
         <div className="w-[40%]">
           <p className="text-textAlt">/* quem sou eu? */</p>
 
           <div className="text-[18pt] mt-4">
             <p className="">
-              Me chamo Ryan, tenho 23 anos, bacharelando em Engenharia de
+              Me chamo Ryan, sou bacharelando em Engenharia de
               Software e desenvolvedor fullstack.
               <br />
             </p>
@@ -56,7 +61,7 @@ export default function About() {
                 href="https://zunbee.com.br"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#ffc300] font-semibold underline"
+                className="text-[#ffc300] font-semibold underline hover:text-[19pt] hover:text-[#ffd95b] duration-300"
               >
                 agência
               </a>
@@ -71,19 +76,19 @@ export default function About() {
           </div>
         </div>
 
-        <div className="w-[60%] flex flex-col justify-center items-center">
+        <div className="w-[60%] flex flex-col">
           <p className="text-textAlt self-end">
-            /* minhas prioridades ao <br /> iniciar um novo projeto */
+            /* minhas prioridades ao <br /> trabalhar em um projeto */
           </p>
 
-          <div className="grid grid-cols-2 space-y-20 space-x-20 self-end mt-4">
+          <div className="md:grid md:grid-cols-2 md:space-y-10 md:gap-x-20 md:self-end mt-4">
             {priorities.map((priority) => (
               <div key={priority.id} className="gap-2 mt-4 flex flex-col">
                 <Image
                   src={priority.image}
                   alt={priority.text}
-                  width={120}
-                  height={120}
+                  width={80}
+                  height={80}
                 />
                 <p className="text-center text-textAlt self-start">
                   {priority.text}
