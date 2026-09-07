@@ -1,4 +1,5 @@
 import Botao from "@/components/Botao";
+import BotaoContato from "@/components/BotaoModal";
 import Image from "next/image";
 import React from "react";
 
@@ -27,6 +28,12 @@ const social = [
     link: "https://www.zunbee.com.br",
     title: "Meu site profissional",
   },
+  {
+    id: 5,
+    icon: "/images/contact/PDF.png",
+    link: "/curriculo_ryan-alecrim-sodre.pdf",
+    title: "Meu currículo"
+  }
 ];
 
 export default function Contact() {
@@ -61,47 +68,18 @@ export default function Contact() {
           ))}
         </ul>
 
-        <form 
-          action=""
-          className="flex flex-col gap-15 w-[40%]"
-        >
-          <input 
-            type="text" 
-            placeholder= "nome"
-            className="inputStyle"
-          />
-
-          <input 
-            type="email" 
-            placeholder="email"
-            className="inputStyle"
-          />
-
-          <input 
-            type="text" 
-            placeholder="assunto"
-            className="inputStyle"
-          />
-
-          <textarea
-            placeholder="mensagem"
-            className="inputStyle"
-            rows={6}
-          />
-
-          <Botao
-            label="Enviar"
-            icon={
-              <Image
-                src="/images/contact/send.png"
-                alt=""
-                width={25}
-                height={25}
-              />
-            }
-            className=""
-          />
-        </form>
+        <BotaoContato
+          label="Entre em contato"
+          icon={
+            <Image
+              src="/images/contact/call-me.png"
+              alt="contato"
+              width={50}
+              height={50}
+            />
+          }
+          className="w-[25%] items-center self-center"
+        />
       </div>
     </section>
   );

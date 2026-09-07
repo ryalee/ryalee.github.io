@@ -48,7 +48,7 @@ export default function Home() {
           </ul>
         </nav>
 
-        <div className="flex items-center gap-2">
+        {/* <div className="flex items-center gap-2">
           <button>
             <Image
               src="/images/header/portuguese.png"
@@ -66,7 +66,7 @@ export default function Home() {
               height={25}
             />
           </button>
-        </div>
+        </div> */}
       </header>
 
       <main className="flex flex-col">
@@ -78,7 +78,7 @@ export default function Home() {
         <div className="w-full h-px self-center bg-foreground rounded-full my-22"></div>
         <Stack />
         <div className="w-full h-px self-center bg-foreground rounded-full my-22"></div>
-        <Contact/>
+        <Contact />
       </main>
 
       <footer className="bg-textLight w-full h-30 flex flex-col items-center justify-center gap-4 py-6">

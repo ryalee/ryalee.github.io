@@ -1,12 +1,15 @@
-import Botao from '@/components/Botao'
-import Image from 'next/image'
-import React from 'react'
+import Botao from "@/components/Botao";
+import Image from "next/image";
+import React from "react";
 
 export default function Hero() {
   return (
     <section className="flex justify-around items-center py-20 mt-20">
       <div>
-        <h1 className="text-5xl w-200">Engenheiro de Software, Desenvolvedor FullStack & entusiasta de Cybersecurity</h1>
+        <h1 className="text-5xl w-200">
+          Engenheiro de Software, Desenvolvedor FullStack & entusiasta de
+          Cybersecurity
+        </h1>
 
         <div className="flex items-center gap-2 mt-4">
           <Image
@@ -19,19 +22,12 @@ export default function Hero() {
           <p>+4 anos de XP como freelancer</p>
         </div>
 
-        <div className="flex gap-5 mt-10">
-          <Botao
-            label="Meus Projetos"
-            icon={
-              <Image
-                src="/images/hero/terminal.png"
-                alt="terminal"
-                width={25}
-                height={25}
-              />
-            }
-          />
-
+        <a 
+          href="/curriculo_ryan-alecrim-sodre.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex mt-10"
+        >
           <Botao
             label="Meu Currículo"
             icon={
@@ -43,7 +39,7 @@ export default function Hero() {
               />
             }
           />
-        </div>
+        </a>
       </div>
 
       <Image
@@ -54,5 +50,5 @@ export default function Hero() {
         className="animate -z-10"
       />
     </section>
-  )
+  );
 }

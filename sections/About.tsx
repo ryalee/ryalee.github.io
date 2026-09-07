@@ -70,8 +70,8 @@ export default function About() {
             <br />
             <p>
               Também me aventuro no mundo da cibersegurança para entender as
-              principais falhas e brechas perigosas para assim construir
-              soluções mais robustas
+              principais falhas e brechas perigosas para ampliar meu repertório e assim construir
+              soluções mais robustas.
             </p>
           </div>
         </div>

@@ -5,12 +5,27 @@ import Image from "next/image";
 export default function Stack() {
   return (
     <section className="flex flex-col w-full py-20" id="stack">
-      <div className="flex flex-col">
-        <p className="text-textAlt">/* tecnologias que uso */</p>
-        <p className="w-[40%]">
-          Da prototipação ao deploy: Linguagens e ferramentas que uso no meu
-          ambiente de trabalho e estudo.
-        </p>
+      <div className="flex"> 
+        <div className="flex flex-col w-[40%]">
+          <p className="text-textAlt">/* tecnologias que uso */</p>
+          <p className="">
+            Da prototipação ao deploy: Linguagens e ferramentas que uso no meu
+            ambiente de trabalho e estudo.
+          </p>
+        </div>
+
+        <div className="flex items-center justify-end">
+          <p className="w-[60%] border-l-2 pl-2 border-[#6f6f6f]">
+            Não possuo 100% em nenhuma tecnologia pois sempre haverá algo novo a ser aprendido.
+          </p>
+
+          <Image
+            src="/images/stack/brain.png"
+            alt=""
+            width={50}
+            height={50}
+          />
+        </div>
       </div>
 
       <div className="mt-10">
