@@ -1,20 +1,30 @@
 import Image from "next/image";
-import React from "react";
+import React, { ReactNode } from "react";
 
-const priorities = [
+type Priority = {
+  id: number;
+  text: ReactNode;
+  alt: string;
+  image: string;
+};
+
+const priorities: Priority[] = [
   {
     id: 1,
     text: "// arquitetura do software",
+    alt: "arquitetura do software",
     image: "/images/about/code.png",
   },
   {
     id: 2,
     text: "// segurança",
+    alt: "segurança",
     image: "/images/about/lock.png",
   },
   {
     id: 3,
     text: "// controle",
+    alt: "controle",
     image: "/images/about/code-fork.png",
   },
   {
@@ -31,13 +41,15 @@ const priorities = [
         />
       </span>
     ),
+    alt: "cafeína",
     image: "/images/about/coffee.png",
   },
   {
     id: 5,
     text: "// Experiência do usuário",
-    image: "/images/about/circus.png"
-  }
+    alt: "Experiência do usuário",
+    image: "/images/about/circus.png",
+  },
 ];
 
 export default function About() {
@@ -86,13 +98,13 @@ export default function About() {
               <div key={priority.id} className="gap-2 mt-4 flex md:flex-col">
                 <Image
                   src={priority.image}
-                  alt={priority.text}
+                  alt={priority.alt}
                   width={80}
                   height={80}
                 />
-                <p className="text-center text-textAlt self-center text-sm">
+                <div className="text-center text-textAlt self-center text-sm">
                   {priority.text}
-                </p>
+                </div>
               </div>
             ))}
           </div>
