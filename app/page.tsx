@@ -9,9 +9,9 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <header className="flex justify-between items-center fixed w-full backdrop-blur-md px-10 py-6 z-20">
+      <header className="flex justify-between items-center fixed w-full backdrop-blur-md md:px-10 px-6 py-3 z-20">
         <div className="flex items-center gap-2">
-          <p className="text-2xl">// Ryan </p>
+          <p className="text-xl md:text-2xl">// Ryan </p>
           <Image
             src="/images/header/coffee.png"
             alt="Coffee"
@@ -53,7 +53,7 @@ export default function Home() {
           href="/curriculo_ryan-alecrim-sodre.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex justify-center md:justify-start w-[30%]"
+          className="flex justify-center md:justify-start w-[50%] md:w-60"
         >
           <Botao
             label="Meu Currículo"
@@ -65,7 +65,7 @@ export default function Home() {
                 height={18}
               />
             }
-            className="text-[11pt]"
+            className="w-full text-[9pt]"
           />
         </a>
 
@@ -102,8 +102,8 @@ export default function Home() {
         <Contact />
       </main>
 
-      <footer className="bg-textLight w-full h-30 flex flex-col items-center justify-center gap-4 py-6">
-        <p className="text-textDark">
+      <footer className="bg-textLight w-full h-25 flex flex-col items-center justify-center gap-4 py-6">
+        <p className="text-textDark text-[10pt]">
           {" "}
           &lsaquo;&rsaquo;{" "}
           <a
