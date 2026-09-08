@@ -1,16 +1,13 @@
-"use client"
+"use client";
 
-import { useState } from "react";
-import dynamic from "next/dynamic";
-import { ReactNode } from "react";
+import { ReactNode, MouseEventHandler } from "react";
 
 interface BotaoProps {
   label: string;
   icon?: ReactNode;
-  onClick?: ReactNode;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
   className?: string;
 }
-
 
 export default function Botao({ label, className, icon, onClick }: BotaoProps) {
   return (
