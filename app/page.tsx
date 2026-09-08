@@ -1,3 +1,4 @@
+import Botao from "@/components/Botao";
 import About from "@/sections/about";
 import Contact from "@/sections/contact";
 import Hero from "@/sections/hero";
@@ -47,6 +48,26 @@ export default function Home() {
             </a>
           </ul>
         </nav>
+
+        <a
+          href="/curriculo_ryan-alecrim-sodre.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex justify-center md:justify-start w-[30%]"
+        >
+          <Botao
+            label="Meu Currículo"
+            icon={
+              <Image
+                src="/images/hero/attach.png"
+                alt="attach"
+                width={18}
+                height={18}
+              />
+            }
+            className="text-[11pt]"
+          />
+        </a>
 
         {/* <div className="flex items-center gap-2">
           <button>
