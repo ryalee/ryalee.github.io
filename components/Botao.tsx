@@ -2,6 +2,15 @@
 
 import { useState } from "react";
 import dynamic from "next/dynamic";
+import { ReactNode } from "react";
+
+interface BotaoModalProps {
+  label: string;
+  icon?: ReactNode;
+  action?: ReactNode;
+  className?: string;
+}
+
 
 export default function Botao({ label = " ", className = "", icon = null, action = null }) {
   return (

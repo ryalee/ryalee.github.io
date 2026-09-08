@@ -2,6 +2,13 @@
 
 import { useState } from "react";
 import dynamic from "next/dynamic";
+import { ReactNode } from "react";
+
+interface BotaoModalProps {
+  label: string;
+  icon?: ReactNode; 
+  className?: string;
+}
 
 const ContatoModal = dynamic(() => import("./modalContato"), {
   ssr: false,
