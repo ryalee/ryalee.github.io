@@ -1,8 +1,8 @@
-import About from "@/sections/about";
-import Contact from "@/sections/contact";
-import Hero from "@/sections/hero";
-import Projects from "@/sections/projects";
-import Stack from "@/sections/stack";
+import About from "../sections/about";
+import Contact from "../sections/contact";
+import Hero from "../sections/hero";
+import Projects from "../sections/projects";
+import Stack from "../sections/stack";
 import Image from "next/image";
 
 export default function Home() {
