@@ -90,7 +90,7 @@ export default function Home() {
         </div> */}
       </header>
 
-      <main className="p-5 md:10 flex flex-col">
+      <main className="p-5 md:p-10 flex flex-col">
         <Hero />
         <div className="w-full h-px self-center bg-foreground rounded-full my-22"></div>
         <About />
