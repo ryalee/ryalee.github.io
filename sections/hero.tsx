@@ -23,7 +23,7 @@ export default function Hero() {
         </div>
 
         <a 
-          href="/curriculo_ryan-alecrim-sodre.pdf"
+          href="/curriculo-ryan_alecrim_sodre.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="flex mt-10 justify-center md:justify-start"

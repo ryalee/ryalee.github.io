@@ -50,7 +50,7 @@ export default function Home() {
         </nav>
 
         <a
-          href="/curriculo_ryan-alecrim-sodre.pdf"
+          href="/curriculo-ryan_alecrim_sodre.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="flex justify-center md:justify-start w-[50%] md:w-60"
