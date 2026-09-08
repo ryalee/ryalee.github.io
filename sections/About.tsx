@@ -42,12 +42,12 @@ const priorities = [
 
 export default function About() {
   return (
-    <section className="flex flex-col py-20" id="sobre">
-      <div className="flex items-center">
-        <div className="w-[40%]">
+    <section className="flex flex-col md:py-20" id="sobre">
+      <div className="flex flex-col md:flex-row items-center">
+        <div className="md:w-[40%]">
           <p className="text-textAlt">/* quem sou eu? */</p>
 
-          <div className="text-[18pt] mt-4">
+          <div className="md:text-[18pt] mt-4">
             <p className="">
               Me chamo Ryan, sou bacharelando em Engenharia de
               Software e desenvolvedor fullstack.
@@ -76,21 +76,21 @@ export default function About() {
           </div>
         </div>
 
-        <div className="w-[60%] flex flex-col">
-          <p className="text-textAlt self-end">
+        <div className="md:w-[60%] mt-20 md:mt-0 flex flex-col">
+          <p className="text-textAlt self-center md:self-end">
             /* minhas prioridades ao <br /> trabalhar em um projeto */
           </p>
 
-          <div className="md:grid md:grid-cols-2 md:space-y-10 md:gap-x-20 md:self-end mt-4">
+          <div className="md:grid md:grid-cols-2 justify-center space-y-10 md:gap-x-20 md:self-end mt-4">
             {priorities.map((priority) => (
-              <div key={priority.id} className="gap-2 mt-4 flex flex-col">
+              <div key={priority.id} className="gap-2 mt-4 flex md:flex-col">
                 <Image
                   src={priority.image}
                   alt={priority.text}
                   width={80}
                   height={80}
                 />
-                <p className="text-center text-textAlt self-start">
+                <p className="text-center text-textAlt self-center text-sm">
                   {priority.text}
                 </p>
               </div>

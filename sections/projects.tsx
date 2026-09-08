@@ -15,10 +15,10 @@ function ProjectCard({ item }: { item: (typeof projects)[0] }) {
   };
 
   return (
-    <div className="flex flex-col justify-between mx-auto bg-textLight text-textDark p-8 gap-3 w-[80%] rounded-xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:scale-105 duration-500">
+    <div className="flex flex-col justify-between mx-auto bg-textLight text-textDark p-8 gap-3 md:w-[80%] rounded-xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:scale-105 duration-500">
       <div className="flex flex-col gap-3">
-        <p className="text-xl font-bold">{item.title}</p>
-        <p>{item.description}</p>
+        <p className="md:text-xl font-bold">{item.title}</p>
+        <p className="text-xs md:text-lg">{item.description}</p>
       </div>
 
       <div>
@@ -105,7 +105,7 @@ function ProjectCard({ item }: { item: (typeof projects)[0] }) {
 
 export default function Projects() {
   return (
-    <section className="flex flex-col py-20" id="projetos">
+    <section className="flex flex-col w-full py-20" id="projetos">
       <div>
         <p className="text-textAlt self-end">/* meus projetos */</p>
         <p>
@@ -114,7 +114,7 @@ export default function Projects() {
         </p>
       </div>
 
-      <div className="grid grid-cols-3 mt-10">
+      <div className="md:grid md:grid-cols-3 mt-10 space-y-20 md:space-y-0 w-full">
         {projects.map((item) => (
           <ProjectCard key={item.id} item={item} />
         ))}

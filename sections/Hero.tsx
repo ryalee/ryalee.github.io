@@ -4,14 +4,14 @@ import React from "react";
 
 export default function Hero() {
   return (
-    <section className="flex justify-around items-center py-20 mt-20">
+    <section className="flex flex-col-reverse md:flex-row justify-around items-center py-20 md:mt-20">
       <div>
-        <h1 className="text-5xl w-200">
+        <h1 className="text-xl w-100 py-5 md:py-0 text-center md:text-left md:text-5xl md:w-200">
           Engenheiro de Software, Desenvolvedor FullStack & entusiasta de
           Cybersecurity
         </h1>
 
-        <div className="flex items-center gap-2 mt-4">
+        <div className="flex md:items-center justify-center md:justify-start gap-2 mt-4">
           <Image
             src="/images/hero/star.png"
             alt="Star"
@@ -26,7 +26,7 @@ export default function Hero() {
           href="/curriculo_ryan-alecrim-sodre.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex mt-10"
+          className="flex mt-10 justify-center md:justify-start"
         >
           <Botao
             label="Meu Currículo"

@@ -5,8 +5,8 @@ import Image from "next/image";
 export default function Stack() {
   return (
     <section className="flex flex-col w-full py-20" id="stack">
-      <div className="flex"> 
-        <div className="flex flex-col w-[40%]">
+      <div className="flex flex-col md:flex-row"> 
+        <div className="flex flex-col md:w-[40%]">
           <p className="text-textAlt">/* tecnologias que uso */</p>
           <p className="">
             Da prototipação ao deploy: Linguagens e ferramentas que uso no meu
@@ -14,8 +14,8 @@ export default function Stack() {
           </p>
         </div>
 
-        <div className="flex items-center justify-end">
-          <p className="w-[60%] border-l-2 pl-2 border-[#6f6f6f]">
+        <div className="flex items-center md:justify-end mt-10 md:mt-0">
+          <p className="md:w-[60%] text-xs border-l-2 pl-2 border-[#6f6f6f]">
             Não possuo 100% em nenhuma tecnologia pois sempre haverá algo novo a ser aprendido.
           </p>
 
@@ -29,11 +29,11 @@ export default function Stack() {
       </div>
 
       <div className="mt-10">
-        <h3 className="mb-5">Linguagens & Frameworks</h3>
+        <h3 className="mb-5 text-center md:text-left">Linguagens & Frameworks</h3>
 
-        <div className="grid grid-cols-3 space-x-5">
+        <div className="md:grid md:grid-cols-3 flex flex-col gap-5 space-x-5">
           {stack.map((item) => (
-            <div className="items-center my-2 w-110" key={item.id}>
+            <div className="items-center my-2 w-85 md:w-110" key={item.id}>
               <div className="flex justify-between mb-2">
                 <div className="flex gap-1">
                   <img src={item.icon} alt={item.name} className="w-10" />
@@ -55,9 +55,9 @@ export default function Stack() {
       </div>
 
       <div className="mt-20">
-        <h3 className="mb-5">Ferramentas</h3>
+        <h3 className="mb-5 text-center md:text-left">Ferramentas</h3>
 
-        <div className="flex w-full items-center justify-between">
+        <div className="flex flex-col md:flex-row gap-10 w-full items-center justify-between">
           {stackTools.map((tool) => (
             <article
               key={tool.id}

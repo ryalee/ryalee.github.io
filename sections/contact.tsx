@@ -39,7 +39,7 @@ const social = [
 export default function Contact() {
   return (
     <section className="mb-20 py-20" id="contato">
-      <div className="w-[40%]">
+      <div className="md:w-[40%]">
         <p className="text-textAlt">/* onde me encontrar */</p>
         <p>
           Estou disponível para novos projetos ou fazer parte de times de alto
@@ -47,19 +47,19 @@ export default function Contact() {
         </p>
       </div>
 
-      <div className="flex px-20 mt-20 justify-between">
+      <div className="flex flex-col md:flex-row px-20 mt-20 justify-between">
         <ul className="flex flex-col gap-2">
           {social.map((item) => (
             <li 
               key={item.id} 
-              className="flex gap-2"
+              className="flex gap-2 w-60 items-center self-center"
             >
               <Image 
                 src={item.icon} 
                 alt={item.title} 
                 width={30} height={30} 
               />
-              <div>
+              <div className="">
                 <a href={item.link} className="mt-2 contact-link">
                   {item.title}
                 </a>
@@ -78,7 +78,7 @@ export default function Contact() {
               height={50}
             />
           }
-          className="w-[25%] items-center self-center"
+          className="md:w-[25%] w-72 gap-2 mt-10 items-center self-center"
         />
       </div>
     </section>
