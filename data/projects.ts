@@ -62,4 +62,20 @@ export const projects = [
     image: "/images/projects/raizes.png",
     stack: ["Next.js", "TypeScript", "Tailwind"],
   },
+  {
+    id: 6,
+    title: "Campo Minado Sinistro",
+    description: "Uma recriação moderna e interativa do clássico Campo Minado.",
+    github: "https://github.com/ryalee/campo-minado-sinistro",
+    webPlaceholder: "Ver na web",
+    webLink: "https://campo-minado-sinistro.vercel.app/",
+    image: "/images/projects/campo-minado.png",
+    stack: [
+       "Next", 
+       "TypeScript", 
+       "Tailwind CSS",
+       "Zustand",
+       "Framer Motion"
+    ]
+  }
 ];

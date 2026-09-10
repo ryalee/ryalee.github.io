@@ -21,7 +21,7 @@ function ProjectCard({ item }: { item: (typeof projects)[0] }) {
         <p className="text-xs md:text-lg">{item.description}</p>
       </div>
 
-      <div>
+      <a href={item.webLink} target="_blank">
         <Image
           src={item.image}
           alt={item.title}
@@ -29,7 +29,7 @@ function ProjectCard({ item }: { item: (typeof projects)[0] }) {
           height={0}
           className="w-full h-full rounded-2xl"
         />
-      </div>
+      </a>
 
       <div>
         <p className="text-xs">Tecnologias utilizadas:</p>
