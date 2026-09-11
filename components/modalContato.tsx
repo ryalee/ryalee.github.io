@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useMemo } from "react";
+import { useState, useCallback, useMemo, ReactNode } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
@@ -9,13 +9,14 @@ type ContatoModalProps = {
 };
 
 export default function ContatoModal({ onClose }: ContatoModalProps) {
-  const [result, setResult] = useState("");
+  // Corrigido a tipagem para aceitar JSX (ex: componente Image)
+  const [result, setResult] = useState<ReactNode>("");
   const [isSending, setIsSending] = useState(false);
 
   const wppLink = useMemo(() => {
     const number = "5574999944759";
     const msg = encodeURIComponent(
-      "Olá! Vi seu portfólio e decidi entrar em contato",
+      "Olá! Vi seu portfólio e decidi entrar em contato"
     );
     return `https://wa.me/${number}?text=${msg}`;
   }, []);
@@ -24,7 +25,16 @@ export default function ContatoModal({ onClose }: ContatoModalProps) {
     async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       setIsSending(true);
-      setResult(<Image src="/images/contact/waiting.gif" alt="waiting" width={70} height={70} className="flex items-center justify-center"/>);
+
+      setResult(
+        <Image
+          src="/images/contact/waiting.gif"
+          alt="waiting"
+          width={70}
+          height={70}
+          className="flex items-center justify-center"
+        />
+      );
 
       const form = e.currentTarget as HTMLFormElement;
       const data = new FormData(form);
@@ -45,11 +55,11 @@ export default function ContatoModal({ onClose }: ContatoModalProps) {
         }
       } catch {
         setResult("Erro de conexão. Tente novamente mais tarde.");
+      } finally {
+        setIsSending(false);
       }
-
-      setIsSending(false);
     },
-    [onClose],
+    [onClose]
   );
 
   return (
@@ -79,9 +89,12 @@ export default function ContatoModal({ onClose }: ContatoModalProps) {
           </button>
 
           <div className="mb-6 text-center">
-            <h2 className="text-2xl text-textDark font-bold mb-2">Vamos construir algo incrível juntos?</h2>
+            <h2 className="text-2xl text-textDark font-bold mb-2">
+              Vamos construir algo incrível juntos?
+            </h2>
             <p className="text-textAlt text-sm">
-              Seja para tirar um projeto do papel, solicitar um orçamento ou discutir uma oportunidade em seu time de engenharia.
+              Seja para tirar um projeto do papel, solicitar um orçamento ou
+              discutir uma oportunidade em seu time de engenharia.
             </p>
           </div>
 
@@ -98,10 +111,9 @@ export default function ContatoModal({ onClose }: ContatoModalProps) {
             <input
               type="hidden"
               name="subject"
-              value="Alguem interessado através do portfólio"
+              value="Novo contato recebido pelo Portfólio"
             />
             <input type="hidden" name="from_name" value="Portfolio Web" />
-            <input type="hidden" name="replyto" value="cliente" />
 
             <input
               name="name"
@@ -120,7 +132,7 @@ export default function ContatoModal({ onClose }: ContatoModalProps) {
             <input
               name="assunto"
               type="text"
-              placeholder="assunto"
+              placeholder="Assunto"
               required
               className="border text-textDark rounded-lg px-4 py-2 focus:ring-2 focus:ring-main outline-none"
             />
@@ -135,15 +147,19 @@ export default function ContatoModal({ onClose }: ContatoModalProps) {
             <button
               type="submit"
               disabled={isSending}
-              className={`${isSending ? "bg-green-800" : "bg-background hover:bg-background/90"} text-white font-semibold py-2 px-6 rounded-[15px] transition`}
+              className={`${
+                isSending
+                  ? "bg-green-800"
+                  : "bg-background hover:bg-background/90"
+              } text-white font-semibold py-2 px-6 rounded-[15px] transition cursor-pointer`}
             >
               {isSending ? "Enviando..." : "Enviar"}
             </button>
 
             {result && (
-              <span className="text-sm text-center text-gray-600 mt-2 flex self-center">
+              <div className="text-sm text-center text-gray-600 mt-2 flex justify-center items-center">
                 {result}
-              </span>
+              </div>
             )}
           </form>
         </motion.div>
