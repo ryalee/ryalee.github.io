@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Stack() {
   return (
     <section className="flex flex-col w-full py-20" id="stack">
-      <div className="flex flex-col md:flex-row"> 
+      <div className="flex flex-col md:flex-row">
         <div className="flex flex-col md:w-[40%]">
           <p className="text-textAlt">/* tecnologias que uso */</p>
           <p className="">
@@ -16,20 +16,18 @@ export default function Stack() {
 
         <div className="flex items-center md:justify-end mt-10 md:mt-0">
           <p className="md:w-[60%] text-xs border-l-2 pl-2 border-[#6f6f6f]">
-            Não possuo 100% em nenhuma tecnologia pois sempre haverá algo novo a ser aprendido.
+            Não possuo 100% em nenhuma tecnologia pois sempre haverá algo novo a
+            ser aprendido.
           </p>
 
-          <Image
-            src="/images/stack/brain.png"
-            alt=""
-            width={50}
-            height={50}
-          />
+          <Image src="/images/stack/brain.png" alt="" width={50} height={50} />
         </div>
       </div>
 
       <div className="mt-10">
-        <h3 className="mb-5 text-center md:text-left">Linguagens & Frameworks</h3>
+        <h3 className="mb-5 text-center md:text-left">
+          Linguagens & Frameworks
+        </h3>
 
         <div className="md:grid md:grid-cols-3 flex flex-col gap-5 space-x-5">
           {stack.map((item) => (
@@ -65,17 +63,26 @@ export default function Stack() {
             >
               <div className="flex gap-5 items-center justify-center w-full">
                 {tool.images.map((imgItem, index) => (
-                  <Image
+                  <div
                     key={index}
-                    src={imgItem}
-                    width={60}
-                    height={60}
-                    alt={`Ferramenta de ${tool.type}`}
-                  />
+                    className="relative group flex items-center justify-center"
+                  >
+                    <Image
+                      src={imgItem}
+                      width={60}
+                      height={60}
+                      alt={tool.toolName[index] || tool.type}
+                      className="transition-transform duration-200 group-hover:scale-110"
+                    />
+
+                    <span className="absolute -top-10 left-1/2 -translate-x-1/2 pointer-events-none opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 bg-gray-900 text-white text-xs px-2.5 py-1 rounded whitespace-nowrap shadow-lg border border-gray-800 z-10">
+                      {tool.toolName[index]}
+                    </span>
+                  </div>
                 ))}
               </div>
 
-              <p className="w-full text-center">{tool.type}</p>
+              <p className="w-full text-center mt-2">{tool.type}</p>
             </article>
           ))}
         </div>

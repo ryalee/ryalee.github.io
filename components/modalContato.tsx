@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 type ContatoModalProps = {
   onClose: () => void;
@@ -23,7 +24,7 @@ export default function ContatoModal({ onClose }: ContatoModalProps) {
     async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       setIsSending(true);
-      setResult("Enviando...");
+      setResult(<Image src="/images/contact/waiting.gif" alt="waiting" width={70} height={70} className="flex items-center justify-center"/>);
 
       const form = e.currentTarget as HTMLFormElement;
       const data = new FormData(form);
@@ -71,17 +72,16 @@ export default function ContatoModal({ onClose }: ContatoModalProps) {
         >
           <button
             onClick={onClose}
-            className="absolute top-3 right-4 text-gray-500 hover:text-gray-800 text-xl"
+            className="absolute top-1 right-4 md:top-1 md:right-3 text-gray-500 hover:text-gray-800 text-4xl"
             aria-label="Fechar modal"
           >
             &times;
           </button>
 
           <div className="mb-6 text-center">
-            <h2 className="text-2xl text-textDark font-bold mb-2">Solicite seu orçamento</h2>
+            <h2 className="text-2xl text-textDark font-bold mb-2">Vamos construir algo incrível juntos?</h2>
             <p className="text-textAlt text-sm">
-              Pronto para tirar seu projeto do papel? <br />
-              Vamos construir algo extraordinário juntos!
+              Seja para tirar um projeto do papel, solicitar um orçamento ou discutir uma oportunidade em seu time de engenharia.
             </p>
           </div>
 
@@ -141,7 +141,7 @@ export default function ContatoModal({ onClose }: ContatoModalProps) {
             </button>
 
             {result && (
-              <span className="text-sm text-center text-gray-600 mt-2">
+              <span className="text-sm text-center text-gray-600 mt-2 flex self-center">
                 {result}
               </span>
             )}

@@ -1,4 +1,5 @@
-import Botao from "@/components/Botao";
+"use client";
+
 import BotaoContato from "@/components/BotaoModal";
 import Image from "next/image";
 import React from "react";
@@ -32,8 +33,8 @@ const social = [
     id: 5,
     icon: "/images/contact/PDF.png",
     link: "/curriculo_ryan-alecrim-sodre.pdf",
-    title: "Meu currículo"
-  }
+    title: "Meu currículo",
+  },
 ];
 
 export default function Contact() {
@@ -50,17 +51,18 @@ export default function Contact() {
       <div className="flex flex-col md:flex-row px-20 mt-20 justify-between">
         <ul className="flex flex-col gap-2">
           {social.map((item) => (
-            <li 
-              key={item.id} 
+            <li
+              key={item.id}
               className="flex gap-2 w-60 items-center self-center"
             >
-              <Image 
-                src={item.icon} 
-                alt={item.title} 
-                width={30} height={30} 
-              />
-              <div className="">
-                <a href={item.link} className="mt-2 contact-link">
+              <Image src={item.icon} alt={item.title} width={30} height={30} />
+              <div>
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 contact-link"
+                >
                   {item.title}
                 </a>
               </div>

@@ -1,8 +1,7 @@
-"use client"
+"use client";
 
-import { useState } from "react";
+import { useState, ReactNode } from "react";
 import dynamic from "next/dynamic";
-import { ReactNode } from "react";
 
 interface BotaoModalProps {
   label: string;
@@ -18,10 +17,15 @@ const ContatoModal = dynamic(() => import("./modalContato"), {
 export default function BotaoContato({ label, icon, className, onClick }: BotaoModalProps) {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleClick = () => {
+    setIsOpen(true);
+    if (onClick) onClick(); // executa algum evento extra caso o elemento pai envie
+  };
+
   return (
     <>
       <button
-        onClick={onClick}
+        onClick={handleClick}
         className={`bg-foreground flex justify-around w-60 py-3 px-6 rounded-[15px] text-textDark text-[14pt] hover:scale-105 duration-300 transition cursor-pointer shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] ${className}`}
       >
         {label}
